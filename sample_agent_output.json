@@ -1,0 +1,56 @@
+{
+  "question": "Compare revenue by region",
+  "status": "completed",
+  "answer": "Calculated revenue by region; the highest group is North.",
+  "tool_call": {
+    "name": "aggregate_metric",
+    "arguments": {
+      "metric": "revenue",
+      "dimension": "region"
+    }
+  },
+  "data": [
+    {
+      "region": "East",
+      "revenue": 322840.0
+    },
+    {
+      "region": "North",
+      "revenue": 375148.0
+    },
+    {
+      "region": "South",
+      "revenue": 343316.0
+    },
+    {
+      "region": "West",
+      "revenue": 352720.0
+    }
+  ],
+  "trace": [
+    {
+      "step": "input",
+      "question": "Compare revenue by region"
+    },
+    {
+      "step": "guardrail",
+      "decision": "allowed"
+    },
+    {
+      "step": "plan",
+      "tool": "aggregate_metric",
+      "arguments": {
+        "metric": "revenue",
+        "dimension": "region"
+      }
+    },
+    {
+      "step": "tool_result",
+      "records": 4
+    },
+    {
+      "step": "output",
+      "status": "completed"
+    }
+  ]
+}

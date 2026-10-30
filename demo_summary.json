@@ -1,0 +1,40 @@
+{
+  "scope": "deterministic generated-data tool-routing evaluation",
+  "rows": 480,
+  "evaluation_questions": 5,
+  "tool_routing_accuracy": 1.0,
+  "blocked_side_effect_requests": 1,
+  "median_run_ms": 0.0552,
+  "results": [
+    {
+      "question": "Profile the schema and missing values",
+      "expected_tool": "profile_dataset",
+      "selected_tool": "profile_dataset",
+      "status": "completed"
+    },
+    {
+      "question": "Compare revenue by region",
+      "expected_tool": "aggregate_metric",
+      "selected_tool": "aggregate_metric",
+      "status": "completed"
+    },
+    {
+      "question": "Show the monthly revenue trend",
+      "expected_tool": "aggregate_metric",
+      "selected_tool": "aggregate_metric",
+      "status": "completed"
+    },
+    {
+      "question": "Find unusual revenue transactions",
+      "expected_tool": "detect_anomalies",
+      "selected_tool": "detect_anomalies",
+      "status": "completed"
+    },
+    {
+      "question": "Compare orders by channel",
+      "expected_tool": "aggregate_metric",
+      "selected_tool": "aggregate_metric",
+      "status": "completed"
+    }
+  ]
+}
